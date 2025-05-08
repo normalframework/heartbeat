@@ -1,0 +1,20 @@
+{
+  "name": "heartbeat",
+  "entryPoint": "/heartbeat.js",
+  "points": {
+    "globalVariables": [
+      {
+        "label": "heartbeatVariable",
+        "defaultValue": {
+          "real": 0
+        }
+      }
+    ],
+    "labelAttribute": "name",
+    "noPoints": true
+  },
+  "schedule": {
+    "rrule": "DTSTART:20250508T040000Z\nRRULE:FREQ=SECONDLY;INTERVAL=10"
+  },
+  "mode": "MODE_SCHEDULED"
+}
