@@ -1,3 +1,4 @@
 {
-  "name": "Heartbeat"
+  "name":  "Heartbeat",
+  "minNfVersion":  "master:8bcb5717"
 }
