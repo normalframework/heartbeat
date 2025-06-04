@@ -9,6 +9,7 @@ module.exports = async ({globalVariables, sdk, update, args}) => {
   let heartbeat = globalVariables[0] 
 
   try { 
+    // the point is created by the global variable, but automatically export this as BACnet
     await sdk.http.post("/api/v1/bacnet/local", {
       "uuid": heartbeat.uuid,
       "object_id": {
@@ -24,8 +25,8 @@ module.exports = async ({globalVariables, sdk, update, args}) => {
       ] 
     })
   } catch (e) {
-     if (e.response?.status !== 409) {
-       console.error("BACnet POST error:", e.response?.data || e.message || e);
+     if (e.status !== 409) {
+       console.error("BACnet POST error:", e.message || e);
      }
   }
     
